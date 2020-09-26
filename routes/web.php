@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('posts/layout');
 });
 
-Route::post('/store', [postController::class,'store']);
-Route::get('/', [postController::class,'index']);
-Route::get('/create', [postController::class,'create']);
-Route::get('/edit/{id}', [postController::class,'edit']);
-Route::post('/update/{id}', [postController::class,'update']);
-Route::get('/show/{id}', [postController::class,'show']);
-Route::get('/delete/{id}', [postController::class,'destroy']);
+Route::post('/store', [PostController::class,'store']);
+Route::get('/', [PostController::class,'index']);
+Route::get('/create', [PostController::class,'create']);
+Route::get('/edit/{id}', [PostController::class,'edit']);
+Route::post('/update/{id}', [PostController::class,'update']);
+Route::get('/show/{id}', [PostController::class,'show']);
+Route::get('/delete/{id}', [PostController::class,'destroy']);
