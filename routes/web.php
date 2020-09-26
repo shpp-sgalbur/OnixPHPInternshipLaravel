@@ -19,8 +19,9 @@ Route::get('/', function () {
 });
 
 Route::post('/store', [postController::class,'store']);
-Route::get('/posts', [postController::class,'index']);
+Route::get('/', [postController::class,'index']);
 Route::get('/create', [postController::class,'create']);
 Route::get('/edit/{id}', [postController::class,'edit']);
 Route::post('/update/{id}', [postController::class,'update']);
-Route::get('/show', [postController::class,'show']);
+Route::get('/show/{id}', [postController::class,'show']);
+Route::get('/delete/{id}', [postController::class,'destroy']);
