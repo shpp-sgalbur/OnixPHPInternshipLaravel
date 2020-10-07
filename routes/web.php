@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::post('/store', [PostController::class,'store']);
 Route::get('/', [PostController::class,'index']);
-Route::get('/create', [PostController::class,'create']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/create', [PostController::class,'create']);
 Route::get('/edit/{id}', [PostController::class,'edit']);
 Route::post('/update/{id}', [PostController::class,'update']);
 Route::get('/show/{id}', [PostController::class,'show']);
