@@ -25,3 +25,6 @@ Route::get('/edit/{id}', [PostController::class,'edit']);
 Route::post('/update/{id}', [PostController::class,'update']);
 Route::get('/show/{id}', [PostController::class,'show']);
 Route::get('/delete/{id}', [PostController::class,'destroy']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
